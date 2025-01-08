@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Variables JS
+        </title>
+    </head>
+    <body>
+        <script>
+              var variableOne;
+
+              var variableTwo, variableThree;
+
+              variableOne = "First value";
+
+              variableTwo = 2,
+              variableThree = 3;
+
+              console.log("variableOne: ", variableOne);
+              console.log("variableTwo: ", variableTwo);
+              console.log("variableThree: ", variableThree);
+
+              var firstName = "John";
+
+              var lastName = "Doe", email = "john@js.com";
+
+              console.log("First Name :", firstName + " Last Name: ", lastName);
+
+              console.log("Email: ", email);
+
+              email = "john@changed.com";
+
+              console.log("Email: ", email);
+
+              //variable scope
+              //global variable
+              var globalVariable = "global";
+              console.log("Global: ", globalVariable);
+
+              function testGLobalVar(){
+                globalVariable = "Global changed";
+              }
+
+              testGLobalVar();
+              console.log("Changed value: ", globalVariable);
+
+              //local variable 
+              function testLocalVar(){
+                var localVar = "Local";
+                console.log("Local variable: ", localVar);
+              }
+
+              testLocalVar();
+              //console.log("Local outside scope: ", localVar); returns exception
+
+              let changeableVariable = "I can change";
+              console.log(changeableVariable);
+
+              changeableVariable = "I have changed";
+              console.log(changeableVariable);
+
+              if(true){
+                var blockVar = "Inside block var";
+                let blockLet = "Inside block let";
+                const blockConst = "Inside block constant";
+
+                console.log(blockVar, blockLet, blockConst);
+              }
+
+              console.log(blockVar);
+             // console.log(blockLet); returns exception
+             // console.log(blockConst); returns exception
+
+
+        </script>
+    </body>
+</html>

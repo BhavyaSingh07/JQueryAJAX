@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Webpage</title>
+  </head>
+
+  <body>
+    <script>
+        var text = "string text written";
+        console.log(text[2]);
+
+        console.log(text.substring(0,6));
+        console.log(text.length);
+
+        var textOne = "Concatenating" + " " + "Strings";
+        console.log(textOne);
+
+        var concatDone = text.concat(" ", textOne);
+        console.log(concatDone);
+
+        const firstName = "Aman";
+        const greeting = `Hello, ${firstName}, how are you?`;
+
+        console.log(greeting);
+        
+        var testType = null;
+        console.log(null);
+        console.log(undefined);
+        console.log(typeof null);
+        console.log(typeof undefined);
+        console.log(typeof testType);
+
+
+        var variable1 = "12" + "34";
+        var variable2 = 15 + "46";
+
+        console.log(variable1, variable2);
+
+        //implicit conversion
+        let result = '3' + 2;
+        console.log(result, typeof result);
+
+        //explicit
+        let number = Number('3');
+        let num = 2 + number;
+        console.log(number, typeof number);
+        console.log(num, typeof num);
+
+        number = parseInt('5');
+        num = number + 7;
+        console.log(num);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JS Intro </title>
+    </head>
+    <body>
+        <button type="button" id="myButton">Click Me</button>
+        <p id="myParagraph"></p>
+        <script>
+            const myButton = document.getElementById("myButton");
+            const myPar = document.getElementById("myParagraph");
+
+            myButton.onclick = function(){
+                alert("My button clicked")
+                this.style.backgroundColor = "blue";
+                this.style.color = "white";
+                myPar.innerHTML = "Hello World";
+            }
+        </script>
+    </body>
+
+</html>

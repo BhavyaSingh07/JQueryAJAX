@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation</title>
+        <style>
+            .dynamic-content{
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+                background-color: #f9f9f9;
+            }
+            .dynamic-content p {
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+    <boyd>
+        <h1>DOM Manipulation</h1>
+        <button id="addElement">Add Element</button>
+        <button id="removeElement">Remove Element</button>
+        <button id="modifyElement">Modify Element</button>
+        <div id="content-container">
+
+        </div>
+
+        <script>
+            const contentContainer = document.getElementById("content-container");
+
+            document.getElementById('addElement').addEventListener('click', function(){
+                const newElement = document.createElement('div');
+                newElement.classList.add('dynamic-content');
+                newElement.innerHTML = `<p>New dynamic element added at ${new Date().toLocaleTimeString()}</p>`;
+                contentContainer.appendChild(newElement);
+            });
+
+            document.getElementById('removeElement').addEventListener('click', function(){
+                const lastElement = contentContainer.lastElementChild;
+                if(lastElement){
+                    contentContainer.removeChild(lastElement);
+                }
+                else{
+                    alert("No elements to remove");
+                }
+            });
+
+            document.getElementById('modifyElement').addEventListener('click', function(){
+                const firstElement = contentContainer.firstElementChild;
+                if(firstElement){
+                    firstElement.style.borderColor = '#ff0000',
+                    firstElement.innerHTML += `<p>Modifed at ${new Date().toLocaleTimeString()}</p>`;
+                }
+                else{
+                    alert("No element to modify");
+                }
+            })
+
+
+        </script>
+    </boyd>
+</html>

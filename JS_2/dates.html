@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dates</title>
+    </head>
+    <body>
+        <script>
+            let partyDate = new Date(2024, 0, 14, 21, 0);
+            console.log("Party starts at: ", partyDate);
+
+            let birthday = new Date(new Date().getFullYear(), 8, 25);
+            console.log("birthday: ", birthday.toLocaleDateString());
+            console.log("Day of the week: ", birthday.getDay());
+
+            //countdown
+            let oneDay = 24*60*60*1000;
+            let daysLeft = Math.ceil((birthday - new Date())/oneDay);
+
+            console.log(daysLeft);
+
+
+            let alarm = new Date();
+            alarm.setDate(alarm.getDate()+1);
+            alarm.setHours(7, 0, 0, 0);
+            console.log("Alarm set for: ", alarm.toLocaleTimeString());
+
+
+            let userInput = prompt("Enter a date");
+            let travelDate = new Date(userInput);
+            let today = new Date();
+            let message = travelDate < today ? "You are in the past" : "You are in the future";
+            alert(message);
+
+            var wateringDate = new Date();
+            console.log("Start watering on: ", wateringDate.toLocaleDateString());
+
+            numberOfWatering = 6;
+            daysBetween = 5;
+
+            for(let i=1; i<=numberOfWatering;i++){
+                let newWateringDate = new Date(wateringDate.getTime() + daysBetween*24*60*60*1000*i);
+                console.log(`Watering ${i}: ${newWateringDate.toLocaleDateString()}`)
+            }
+
+        </script>
+    </body>
+</html>

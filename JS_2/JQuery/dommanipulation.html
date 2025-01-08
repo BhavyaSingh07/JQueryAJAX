@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Interactive JQuery DOM Manipulation</title>
+    </head>
+    <body>
+        <div id="container">
+            <div class="parent">
+                <div class="child">Child One</div>
+                <div class="child">
+                    Child Two
+                    <div class="grandchild">Grandchild One</div>
+                    <div class="grandchild">Grandchild Two</div>
+                </div>
+                <div class="child">Child Three</div>
+            </div>
+        </div>
+
+        <button id="btnChildren" type="button">Highlight Children</button>
+        <button id="btnFind" type="button">Find GrandChildren</button>
+        <button id="btnParent" type="button">Parent of grandchildren</button>
+        <button id="btnParents" type="button">Parents upto container</button>
+        <button id="btnSiblings" type="button">Siblings of middle child</button>
+        <button id="btnNext" type="button">Next of first child</button>
+        <button id="btnPrev" type="button">Previous of last child</button>
+        <button id="btnNextAll" type="button">Next all from child one</button>
+        <button id="btnPrevAll" type="button">Previous all from child three</button>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                //highlight direct children of .parent
+                $('#btnChildren').click(function(){
+                    $('.parent').children().css("border", "2px solid blue");
+                })
+
+                //highlight all grandchild
+                $('#btnFind').click(function(){
+                    $('#container').find('.grandchild').css("background-color", "yellow");
+                })
+
+                //highlight parent of grandchild
+                $('#btnParent').click(function(){
+                    $('.grandchild').first().parent().css("background-color", "red");
+                })
+
+                $('#btnParents').click(function(){
+                    $('.grandchild').parents('#container').css('border', "2px dashed green");
+                })
+
+                $('#btnSiblings').click(function(){
+                    $('.child').eq(1).siblings().css("font-weight", "bold");
+                })
+
+                $('#btnNext').click(function(){
+                    $('.child').first().next().css("text-decoration", "underline");
+                })
+
+                $('#btnPrev').click(function(){
+                    $('.child').last().prev().css("text-decoration", "overline");
+                })
+
+                $('#btnNextAll').click(function(){
+                    $('.child').first().nextAll().css("color", "blue");
+                })
+
+                $('#btnPrevAll').click(function(){
+                    $('.child').last().prevAll().css("color", "red");
+                })
+            
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Arrays in JS</title>
+    </head>
+    <body>
+        <script>
+            var myArray = ["Text", 10, true, function myFunc(){}, ["false", 10, "String"]]
+
+            console.log(myArray[4][2]);
+            console.log(myArray[1]);
+
+            //expanding and shortening
+            var array = [0,1,2,3,4,5];
+            array.push(6,7);
+
+            console.log(array);
+
+            array.unshift(-2,-1);
+
+            console.log(array);
+
+            array.pop();
+            console.log(array);
+
+            array.shift()
+            console.log(array);
+
+            array[8] = 9;
+            console.log(array);
+
+            console.log("Array len: ", array.length);
+
+            //filtering
+            var numbers = [1,2,3,4,5,6];
+
+            var evenNumbers = numbers.filter(function(num){
+                return num % 2 === 0;
+            })
+
+            console.log(evenNumbers);
+
+            //
+            var squares = numbers.map(function(num){
+                return num*num;
+            })
+            console.log(squares);
+
+            var sortedArray = [9,8,7,5,1,3,2,12,32,11];
+            console.log(sortedArray.sort());
+
+        </script>
+    </body>
+</html>

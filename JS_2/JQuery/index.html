@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery</title>
+        <style>
+            .highlight{
+                background-color: yellow;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <p>This is a paragraph</p>
+        <p>This is another paragraph</p>
+        <button type="button" >Apply class to paragraph</button>
+        <script>
+            $(document).ready(function(){
+                $('button').click(function(){
+                    $('p').addClass('highlight')
+                })
+            })
+        </script> 
+    </body>
+</html>

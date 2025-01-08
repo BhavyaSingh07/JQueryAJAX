@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects</title>
+    </head>
+    <body>
+        <script>
+            var car ={
+                type: "fiat",
+                model: "500",
+                color: "white"
+            };
+
+            console.log(car.color, car.model, car.type);
+
+            let employee ={
+                id: 123,
+                personInfo:{
+                    firstName:"John",
+                    lastName:"Smith",
+                    age:30
+                },
+                address:{
+                    country:"Germany",
+                    city:"Berlin"
+                }
+            };
+
+            console.log(employee.address.city);
+
+            for(let key in employee){
+                if(employee.hasOwnProperty(key)){
+                    if(typeof employee[key] == "object"){
+                        for(let subKey in employee[key]){
+                            console.log(subKey + ": " + employee[key][subKey]);
+                        }
+                    }
+                    else{
+                        console.log(key + ": " + employee[key]);
+                    }
+                }
+            }
+        </script>
+
+    </body>
+</html>

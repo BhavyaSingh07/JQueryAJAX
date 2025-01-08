@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery Selectors</title>
+        <style>
+            .highlight{
+                background-color: yellow;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <h2>Handling attribute</h2>
+
+        <button
+        type="button"
+        data-button-index="1"
+        title="Some title"
+        id="getAttrButton">
+           Get Attributes
+        </button>
+
+        <button type="button" id="setAttrButton">Set Attributes</button>
+
+        <ul class="attr-list"></ul>
+        <hr/>
+        <h2>Handling classes</h2>
+        <button type="button" id="addClassButton">Add Class</button>
+        <button type="button" id="removeClassButton">Remove Class</button>
+        <button type="button" id="toggleClassButton">Toggle Class</button>
+        <p>This is a sample paragraph</p>
+
+        <script>
+            $(document).ready(function(){
+                var getAttrButton = $('#getAttrButton');
+                var setAttrButton = $('#setAttrButton');
+
+                var addClassButton = $('#addClassButton');
+                var removeClassButton = $('#removeClassButton');
+                var toggleClassButton = $('#toggleClassButton');
+
+                getAttrButton.click(function(){
+                    var title = $(this).attr('title');
+                    var btnIndex = $(this).attr('data-button-index');
+                    var btnId = $(this).attr('id');
+
+                    $('.attr-list').empty();
+                    createLisItems(title);
+                    createLisItems(btnIndex);
+                    createLisItems(btnId);
+                })
+
+                setAttrButton.click(function(){
+                    getAttrButton.attr('title', 'New Title');
+                    getAttrButton.attr('id', 'New id');
+                    getAttrButton.attr('data-button-index', 'New data button index');
+                })
+
+                addClassButton.click(function(){
+                    $('p').addClass('highlight');
+                })
+
+                removeClassButton.click(function(){
+                    $('p').removeClass('highlight');
+                })
+
+                toggleClassButton.click(function(){
+                    $('p').toggleClass('highlight');
+                })
+            });
+
+            function createLisItems(value){
+                var html = `<li>${value}</li>`;
+                $('.attr-list').append(html);
+            }
+
+
+        </script>
+        
+    </body>
+</html>
