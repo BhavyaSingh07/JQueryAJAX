@@ -1,0 +1,41 @@
+body,
+fieldset legend {
+  font: 16px "Segoe UI", Verdana;
+}
+#txtInfo {
+  color: red;
+}
+input,
+textarea,
+select, button {
+  border: 1px solid #e2e2e2;
+  color: #333;
+  font-size: 1.2em;
+  padding: 5px;
+  width: 300px;
+  font-weight: bold;
+}
+input[type="button"], button {
+  width: 312px;
+  cursor: pointer;
+}
+fieldset {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+fieldset legend,
+p {
+  font-weight: bold;
+}
+p {
+  font-size: 1.5em;
+  color: #333;
+}
+.table {
+  width: 800px;
+}
+.column1 {
+  width: 120px;
+  text-align: right;
+}

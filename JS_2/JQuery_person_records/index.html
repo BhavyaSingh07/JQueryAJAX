@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JQuery - Person Entry</title>
+    <link rel="stylesheet" href="./script.js" />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    ></script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>
+        <button type="button" id="personEntryToggle">Person Entry</button>
+      </legend>
+      <div id="entry">
+        <table cellpadding="5" cellspacing="0" class="table">
+          <tr>
+            <td class="column1">First Name:</td>
+            <td><input type="text" id="firstName" /></td>
+          </tr>
+          <tr>
+            <td class="column1">Last Name:</td>
+            <td><input type="text" id="lastName" /></td>
+          </tr>
+          <tr>
+            <td class="column1">Address:</td>
+            <td><input type="text" id="address" /></td>
+          </tr>
+          <tr>
+            <td class="column1">City:</td>
+            <td><input type="text" id="city" /></td>
+          </tr>
+          <tr>
+            <td class="column1">&nbsp;</td>
+            <td>
+              <input type="button" value="Add Person" id="addPersonBtn" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><p id="info"></p></td>
+          </tr>
+        </table>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>
+        <button type="button" id="reviewToggle">Person Review</button>
+      </legend>
+      <div id="review">
+        <table cellpadding="5" cellspacing="0" class="table">
+          <tr>
+            <td class="column1">Select person:</td>
+            <td>
+              <select id="people"></select>
+            </td>
+          </tr>
+          <tr>
+            <td class="column1">&nbsp;</td>
+            <td><p id="displayAddress"></p></td>
+          </tr>
+          <tr>
+            <td class="column1">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+    </fieldset>
+    <script src="./script.js"></script>
+  </body>
+</html>

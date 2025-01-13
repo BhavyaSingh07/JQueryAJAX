@@ -1,0 +1,73 @@
+{
+	"GraphModifiedOn": 638711402832999835,
+	"EntRoomId": [
+		412
+	],
+	"EntLocations": [
+		"Room - 412, M, BG (0), Gurugram, India"
+	],
+	"AddInVersion": null,
+	"EntAttributes": null,
+	"EntRoomCapacity": null,
+	"EntMailbox": null,
+	"EntAttendees": [
+		{
+			"emailAddress": "balveer@eptteem.onmicrosoft.com",
+			"attendeeType": 1,
+			"roomId": 412,
+			"companyName": null,
+			"phoneNumber": null,
+			"firstName": null,
+			"lastName": null
+		},
+		{
+			"emailAddress": "",
+			"attendeeType": 1,
+			"roomId": 412,
+			"companyName": null,
+			"phoneNumber": null,
+			"firstName": "pramod",
+			"lastName": "singh"
+		},
+		{
+			"emailAddress": "",
+			"attendeeType": 1,
+			"roomId": 412,
+			"companyName": null,
+			"phoneNumber": null,
+			"firstName": "ankit",
+			"lastName": "kumar"
+		}
+	],
+	"MeetingCreatedBy": "balveer@eptteem.onmicrosoft.com",
+	"EntBookingSource": 1,
+	"EntProperties": [
+		{
+			"roomId": 412,
+			"location": "Room - 412, M, BG (0), Gurugram, India",
+			"attendees": [
+				{
+					"emailAddress": "",
+					"attendeeType": 1,
+					"roomId": 412,
+					"companyName": null,
+					"phoneNumber": null,
+					"firstName": "pramod",
+					"lastName": "singh"
+				},
+				{
+					"emailAddress": "",
+					"attendeeType": 1,
+					"roomId": 412,
+					"companyName": null,
+					"phoneNumber": null,
+					"firstName": "ankit",
+					"lastName": "kumar"
+				}
+			],
+			"attributes": [],
+			"roomCapacity": 2,
+			"mailBox": null
+		}
+	]
+}

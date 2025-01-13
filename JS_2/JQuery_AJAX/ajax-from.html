@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AJAX Form</title>
+    </head>
+    <body>
+        <form id="userForm">
+            <div>
+                <label for="title">Title: </label>
+                <input type="title" name="title" id="title" required />
+            </div>
+            <div>
+                <label for="body">Body: </label>
+                <textarea type="body" name="body" id="body" ></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#userForm').submit(function(event){
+                    event.preventDefault();
+
+                    var formData = $(this).serialize();
+
+                    $.ajax({
+                        type: "POST",
+                        data: formData,
+                        url: "https://jsonplaceholder.typicode.com/posts",
+                        success: function(response){
+                            console.log(response);
+                            $('#result').html(JSON.stringify(response));
+
+                        },
+                        error:function(){
+                            $('#result').html("An error occured");
+                        },
+                    });
+                });
+            });
+
+        </script>
+    </body>
+</html>

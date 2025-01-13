@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AJAX</title>
+    </head>
+    <body>
+        <button id="loadData">Load Data</button>
+        <div id="data"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#loadData').click( function(){
+                    $.ajax({
+                    url: "C:\Users\BhavyaSingh\Desktop\JavaScript\JS_2\JQuery_AJAX\data.json",
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data){
+                        $('#data').html(
+                            "prev" + JSON.stringify(data, null, 2) + "</prev>"
+                        );
+                    },
+                    error: function(xhr, error){
+                        console.error(error);
+                        $('#data').html("Error: " + error);
+                    },
+                });
+              });
+            });
+        </script>
+    </body>
+</html>
